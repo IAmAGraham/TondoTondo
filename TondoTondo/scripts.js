@@ -1,20 +1,37 @@
-// scripts.js for Tondo Tondo Website
+// scripts.js — Tondo Tondo
 
-// Smooth scroll for nav links
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+// --- Smooth scroll for all anchor links ---
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    if (!target) return;
+    e.preventDefault();
+    const navHeight = document.getElementById('main-nav')?.offsetHeight || 72;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+    // Close mobile nav if open
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
-// Optional: Mobile nav toggle (if you add a mobile menu)
-// const navToggle = document.getElementById('nav-toggle');
-// navToggle.addEventListener('click', () => {
-//   document.querySelector('nav ul').classList.toggle('open');
-// });
+// --- Mobile nav toggle ---
+const navToggle = document.getElementById('nav-toggle');
+const navLinks  = document.getElementById('nav-links');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
+
+// --- Nav background on scroll ---
+const nav = document.getElementById('main-nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.style.borderBottomColor = window.scrollY > 40
+      ? 'rgba(122, 158, 106, 0.25)'
+      : 'rgba(122, 158, 106, 0.15)';
+  }, { passive: true });
+}
