@@ -1,0 +1,214 @@
+/* styles.css for Tondo Tondo Website */
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+/* Color Variables */
+:root {
+  --coastal-green: #C5CEC0;
+  --linen-white: #F7F5EF;
+  --charcoal-ink: #2f2f2f;
+  --clay-taupe: #D6BCA8;
+  --olive-mist: #9DA88E;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ovo', serif;
+  color: var(--charcoal-ink);
+  background-color: var(--linen-white);
+  line-height: 1.75;
+  font-size: 1.1rem;
+}
+
+header.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: var(--linen-white);
+  text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: var(--linen-white);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+nav h1 {
+  font-size: 1.8rem;
+  color: var(--charcoal-ink);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--charcoal-ink);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--olive-mist);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin-left: 1.5rem;
+}
+
+    .hero-text {
+      background-image: url('images/hero-title.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      padding: 20rem;
+      text-align: center;
+      color: var(--charcoal-ink);
+    }
+    .hero-text::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(197, 206, 192, 0.4); /* Coastal green filter */
+      z-index: 0;
+    }
+
+    .hero-text h2,
+    .hero-text p {
+      position: relative;
+      z-index: 1;
+      
+    }
+
+.hero-text h2 {
+  font-size: 3rem;
+        color: var(--charcoal-ink);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+       color: var(--charcoal-ink);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2, section h3, section h4 {
+  color: var(--olive-mist);
+  margin-bottom: 1rem;
+}
+
+section#about h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+section#about p {
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.feature {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature h4 {
+  color: var(--olive-mist);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  background-color: var(--coastal-green);
+  color: var(--charcoal-ink);
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--clay-taupe);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.95rem;
+  color: var(--olive-mist);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+
