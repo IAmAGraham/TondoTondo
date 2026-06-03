@@ -628,6 +628,84 @@ h3 {
    BOOKING
    ============================================================ */
 
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+
+.section-reviews {
+  text-align: center;
+}
+
+.rating-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 2.75rem;
+}
+
+.rating-stars {
+  color: var(--terracotta);
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.rating-score {
+  font-size: 1.25rem;
+  color: var(--forest-mid);
+}
+
+.rating-score strong {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+}
+
+.rating-count {
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--muted-on-light);
+}
+
+.review-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--cream-warm);
+  border-radius: var(--radius-md);
+  border-top: 4px solid var(--terracotta);
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.review-stars {
+  display: block;
+  color: var(--terracotta);
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.1rem;
+}
+
+.review-card blockquote {
+  margin: 0;
+}
+
+.review-card blockquote p {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+
+.review-card figcaption {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--muted-on-light);
+}
+
 .section-booking {
   background: var(--forest-deep);
   color: var(--text-on-dark);

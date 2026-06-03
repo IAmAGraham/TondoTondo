@@ -49,9 +49,15 @@
     {
       "@context": "https://schema.org",
       "@type": ["LodgingBusiness", "VacationRental"],
+      "additionalType": "https://schema.org/VacationRental",
+      "identifier": "tondotondo-cherry-log-ga",
       "name": "Tondo Tondo",
       "description": "A modern, pet-friendly mountain cabin retreat in the Blue Ridge area of Georgia. Private hot tub, fire pit, screened porch, full kitchen, high-speed WiFi, and washer/dryer. 2 bedrooms, sleeps 4. Just 5 minutes from downtown Blue Ridge.",
-      "image": "https://tondotondocabin.com/images/og-image.png",
+      "image": [
+        "https://tondotondocabin.com/images/og-image.png",
+        "https://tondotondocabin.com/images/hero-title.png",
+        "https://tondotondocabin.com/images/logo.png"
+      ],
       "url": "https://tondotondocabin.com",
       "address": {
         "@type": "PostalAddress",
@@ -86,6 +92,49 @@
         { "@type": "LocationFeatureSpecification", "name": "Smart TV", "value": true }
       ],
       "priceRange": "$$",
+      "containsPlace": [
+        {
+          "@type": "LodgingRoom",
+          "name": "Primary Bedroom",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Queen",
+            "numberOfBeds": 1
+          }
+        },
+        {
+          "@type": "LodgingRoom",
+          "name": "Bunk Room",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2
+          },
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Bunk bed",
+            "numberOfBeds": 1
+          }
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.86,
+        "reviewCount": 37,
+        "bestRating": 5
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Airbnb Guest"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "reviewBody": "Perfect mountain escape. The hot tub and screened porch were incredible. Will definitely be back."
+      },
       "sameAs": [
         "https://www.airbnb.com/rooms/1441561239381786811",
         "https://www.vrbo.com/4660478"
@@ -208,6 +257,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#amenities">Amenities</a></li>
         <li><a href="#nearby">Nearby</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#booking" class="nav-cta">Book Now</a></li>
       </ul>
@@ -500,6 +550,26 @@
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section id="reviews" class="section section-reviews">
+    <div class="container">
+      <span class="eyebrow">What Guests Say</span>
+      <h2>Loved by Travelers</h2>
+      <div class="rating-summary" aria-label="Average rating 4.86 out of 5 from 37 reviews">
+        <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rating-score"><strong>4.86</strong> / 5</span>
+        <span class="rating-count">from 37 reviews on Airbnb &amp; VRBO</span>
+      </div>
+      <figure class="review-card">
+        <span class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote>
+          <p>Perfect mountain escape. The hot tub and screened porch were incredible. Will definitely be back.</p>
+        </blockquote>
+        <figcaption>&mdash; Airbnb Guest</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- BOOKING CTA -->
   <section id="booking" class="section section-booking">
     <div class="container booking-inner">
@@ -551,6 +621,7 @@
         <a href="#about">About</a>
         <a href="#amenities">Amenities</a>
         <a href="#nearby">Nearby</a>
+        <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#booking">Book</a>
       </nav>
